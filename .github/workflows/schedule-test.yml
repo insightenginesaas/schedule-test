@@ -1,1 +1,13 @@
+name: Schedule Test
 
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Scheduled run works!"
